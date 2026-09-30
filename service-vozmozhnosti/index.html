@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Сервисы с API | ZorNet.Ru</title>
+<meta name="description" content="Сервисы с API: инструменты с программным интерфейсом для интеграций, автоматизации, передачи данных и подключения к другим системам." />
+<link rel="canonical" href="$HOME_PAGE_LINK$$REQUEST_URI$" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ZorNet.Ru" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content="Арбитраж трафика" />
+<meta property="og:description" content="Подборка сервисов для арбитража трафика с рейтингом, отзывами, тарифами, промокодами и кратким описанием возможностей." />
+<meta property="og:url" content="$HOME_PAGE_LINK$$REQUEST_URI$" />
+<meta property="og:image" content="https://zornet.ru/images/og/services-arbitrage.jpg" />
+<meta property="og:image:secure_url" content="https://zornet.ru/images/og/services-arbitrage.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Сервисы для арбитража трафика на ZorNet.Ru" />
+
+<!-- Schema.org: CollectionPage + ItemList + BreadcrumbList. Рейтинги в демо не размечены, чтобы не публиковать тестовые оценки как фактические. -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"$HOME_PAGE_LINK$#website",
+      "url":"$HOME_PAGE_LINK$",
+      "name":"ZorNet.Ru",
+      "inLanguage":"ru-RU"
+    },
+    {
+      "@type":"CollectionPage",
+      "@id":"$HOME_PAGE_LINK$$REQUEST_URI$#webpage",
+      "url":"$HOME_PAGE_LINK$$REQUEST_URI$",
+      "name":"Арбитраж трафика",
+      "description":"Подборка сервисов для арбитража трафика с кратким описанием возможностей, тарифами, отзывами и скидками.",
+      "inLanguage":"ru-RU",
+      "dateModified":"2026-08-26",
+      "isPartOf":{"@id":"$HOME_PAGE_LINK$#website"},
+      "breadcrumb":{"@id":"$HOME_PAGE_LINK$$REQUEST_URI$#breadcrumb"},
+      "mainEntity":{"@id":"$HOME_PAGE_LINK$$REQUEST_URI$#services"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"$HOME_PAGE_LINK$$REQUEST_URI$#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"ZorNet.Ru","item":"$HOME_PAGE_LINK$"},
+        {"@type":"ListItem","position":2,"name":"Сервисы","item":"$HOME_PAGE_LINK$/services/"},
+        {"@type":"ListItem","position":3,"name":"Арбитраж трафика","item":"$HOME_PAGE_LINK$$REQUEST_URI$"}
+      ]
+    },
+    {
+      "@type":"ItemList",
+      "@id":"$HOME_PAGE_LINK$$REQUEST_URI$#services",
+      "name":"Сервисы для арбитража трафика",
+      "numberOfItems":10,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"TargetHunter","applicationCategory":"MarketingApplication"}},
+        {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"InstaHero","applicationCategory":"MarketingApplication"}},
+        {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Anketolog","applicationCategory":"BusinessApplication"}},
+        {"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Telemetr","applicationCategory":"MarketingApplication"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"ROMI Center","applicationCategory":"BusinessApplication"}},
+        {"@type":"ListItem","position":6,"item":{"@type":"SoftwareApplication","name":"SendPulse","applicationCategory":"BusinessApplication"}},
+        {"@type":"ListItem","position":7,"item":{"@type":"SoftwareApplication","name":"Telega.in","applicationCategory":"MarketingApplication"}},
+        {"@type":"ListItem","position":8,"item":{"@type":"SoftwareApplication","name":"Roistat","applicationCategory":"BusinessApplication"}},
+        {"@type":"ListItem","position":9,"item":{"@type":"SoftwareApplication","name":"Simpoll","applicationCategory":"BusinessApplication"}},
+        {"@type":"ListItem","position":10,"item":{"@type":"SoftwareApplication","name":"Leadteh","applicationCategory":"BusinessApplication"}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --zn-bg:#f5f6f7;--zn-paper:#fff;--zn-text:#33383f;--zn-muted:#7b838c;--zn-line:#e2e5e9;--zn-line2:#eceef1;
+  --zn-blue:#1786c8;--zn-blue-dark:#0f70ad;--zn-blue-soft:#eef7fc;--zn-green:#2da56f;--zn-yellow:#d89d26;
+  --zn-gold-bg:#fff7d9;--zn-gold-border:#eadca6;--zn-radius:4px;--zn-shadow:0 1px 2px rgba(24,35,48,.04)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--zn-text);background:var(--zn-bg);font-size:14px;line-height:1.55}
+a{color:var(--zn-blue);text-decoration:none}a:hover{text-decoration:underline}
+button,input,select{font-family:inherit}
+
+/* Demo shell: на живой странице ZorNet существующие header/sidebar можно оставить без изменений. */
+.zn-topbar{background:#22272d;color:#fff;border-bottom:3px solid var(--zn-blue)}
+.zn-topbar__inner{max-width:1180px;margin:auto;height:58px;display:flex;align-items:center;gap:26px;padding:0 14px}
+.zn-logo{font-size:21px;font-weight:700;letter-spacing:.6px;color:#fff;white-space:nowrap}.zn-logo span{color:#51b4ec}
+.zn-nav{display:flex;align-items:center;gap:21px;flex:1}.zn-nav a{color:#eef2f5;font-size:13px}.zn-auth{color:#cfd7dd;font-size:13px;white-space:nowrap}
+.zn-page{max-width:1180px;margin:18px auto 34px;padding:0 14px;display:grid;grid-template-columns:minmax(0,calc(100% - 314px));gap:0;align-items:start}
+.zn-main{min-width:0}.zn-sidebar{display:flex;flex-direction:column;gap:14px}.zn-sidebox{background:#fff;border:1px solid var(--zn-line);box-shadow:var(--zn-shadow)}
+.zn-sidebox__title{font-weight:700;font-size:14px;padding:11px 13px;border-bottom:1px solid var(--zn-line2);background:#fafbfc}.zn-sidebox__body{padding:12px 13px;color:#5f6670}
+.zn-search{display:flex;border:1px solid #d8dde2;background:#fff}.zn-search input{border:0;padding:9px 10px;min-width:0;width:100%;outline:0}.zn-search button{border:0;background:var(--zn-blue);color:#fff;padding:0 12px;cursor:pointer}
+.zn-cat{list-style:none;padding:0;margin:0}.zn-cat li{border-bottom:1px solid #f0f1f3;padding:7px 0}.zn-cat li:last-child{border-bottom:0}.zn-cat a{font-size:13px}
+.zn-footer{border-top:1px solid #dfe3e7;background:#fff;color:#7b838c;font-size:12px;padding:18px;text-align:center}
+
+/* Services collection. Все классы изолированы префиксом sv-. */
+.sv-wrap{width:100%}
+.sv-breadcrumbs{font-size:12px;color:#8a929a;margin:0;padding:0;white-space:nowrap;overflow-x:auto;scrollbar-width:none}.sv-breadcrumbs::-webkit-scrollbar{display:none}.sv-breadcrumbs a{color:#6f7881}.sv-breadcrumbs span{margin:0;padding:0;color:#b4bac0}
+.sv-hero,.sv-panel,.sv-section,.sv-update{background:var(--zn-paper);border:1px solid var(--zn-line);box-shadow:var(--zn-shadow);border-radius:var(--zn-radius)}
+.sv-hero{padding:19px 20px;margin-bottom:12px}.sv-title-row{display:flex;align-items:flex-start;gap:9px}.sv-title-row h1{font-size:26px;line-height:1.2;margin:0 0 7px;color:#2f3943;flex:0 1 auto}
+.sv-help{position:relative;flex:0 0 24px;width:24px;height:24px;margin-top:2px;border:1px solid #cfd9df;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--zn-blue);background:#fff;cursor:pointer;line-height:1}
+.sv-help:hover,.sv-help:focus{background:var(--zn-blue-soft);border-color:#a9d3e9;text-decoration:none;outline:none}
+.sv-help::after{content:attr(data-tooltip);position:absolute;top:31px;right:0;width:max-content;max-width:260px;padding:7px 9px;border-radius:4px;background:#2f3943;color:#fff;font-size:11px;font-weight:400;line-height:1.35;box-shadow:0 4px 14px rgba(24,35,48,.18);opacity:0;visibility:hidden;transform:translateY(-3px);transition:.16s ease;z-index:30;pointer-events:none}
+.sv-help:hover::after,.sv-help:focus::after{opacity:1;visibility:visible;transform:translateY(0)}
+.sv-hero p{margin:0;max-width:800px;color:#5f6872}.sv-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:11px;font-size:11px;color:#7b838c}.sv-meta b{color:#4b555f}
+
+/* Верхние рубрики — ссылки на отдельные подборки. */
+.sv-root-nav{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 8px}.sv-root-nav a{border:1px solid #d9e0e5;background:#fff;color:#52606b;border-radius:3px;padding:7px 10px;font-size:12px;white-space:nowrap}.sv-root-nav a:hover,.sv-root-nav a.is-active{border-color:#a9d3e9;background:var(--zn-blue-soft);color:var(--zn-blue);text-decoration:none}
+.sv-root-count{display:inline-flex;align-items:center;justify-content:center;min-width:19px;height:19px;margin-left:5px;padding:0 5px;border-radius:10px;background:#eef1f4;color:#66717b;font-size:10px;font-weight:700}.sv-root-nav a.is-active .sv-root-count{background:#dceff9;color:var(--zn-blue)}
+
+/* Подкатегории текущей подборки — фильтр без перезагрузки в демо. */
+.sv-filter-nav{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 8px}.sv-filter-nav button{appearance:none;border:1px solid #d9e0e5;background:#fff;color:#52606b;border-radius:3px;padding:4px 7px;font:inherit;font-size:10px;line-height:1.25;cursor:pointer;white-space:nowrap}.sv-filter-nav button:hover,.sv-filter-nav button.is-active{border-color:#a9d3e9;background:var(--zn-blue-soft);color:var(--zn-blue)}
+
+.sv-featured{display:grid;grid-template-columns:64px 1fr auto;gap:13px;align-items:center;padding:14px 15px;margin-bottom:12px;background:var(--zn-gold-bg);border-color:var(--zn-gold-border);cursor:pointer;transition:background-color .15s ease,box-shadow .15s ease}.sv-featured:hover,.sv-featured:focus{background:#fff3c2;box-shadow:inset 3px 0 0 #d7b24b;outline:none}
+.sv-featured-logo,.sv-logo{border-radius:4px;background:#26384d;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}.sv-featured-logo{width:64px;height:64px;font-size:17px}.sv-featured h2{font-size:16px;margin:0 0 3px}.sv-featured p{font-size:12px;margin:0;color:#66717b}.sv-featured-label{font-size:10px;color:#7f8890;margin-bottom:3px}.sv-featured-stats{display:flex;flex-wrap:wrap;gap:0;margin-top:7px;color:#5f6872}.sv-featured-stats span{font-size:10px}.sv-featured-stats span:not(:last-child)::after{content:" · ";margin:0 6px}.sv-featured .sv-site{min-width:104px;text-align:center}
+
+.sv-panel{margin-bottom:12px;overflow:hidden}
+
+.sv-table-wrap{overflow:hidden}.sv-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}.sv-table th{background:#f7f8f9;color:#6f7881;font-weight:700;text-align:left;padding:9px 8px;border-bottom:1px solid var(--zn-line)}.sv-table td{padding:11px 8px;border-bottom:1px solid var(--zn-line2);vertical-align:middle}.sv-table tr:last-child td{border-bottom:0}.sv-table tbody tr.sv-row{cursor:pointer;transition:background-color .15s ease,box-shadow .15s ease}.sv-table tbody tr.sv-row:hover,.sv-table tbody tr.sv-row:focus{background:#f0f8fd;box-shadow:inset 3px 0 0 var(--zn-blue);outline:none}
+.sv-col-service{width:22%}.sv-col-purpose{width:25%}.sv-col-rating{width:14%}.sv-col-price{width:13%}.sv-col-deal{width:26%}
+.sv-service{display:flex;align-items:center;gap:9px;min-width:0}.sv-logo{width:40px;height:40px;flex:0 0 40px;font-size:10px}.sv-service-name{min-width:0}.sv-service-name b{display:block;font-size:13px;color:#343e47;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sv-service-name small{display:block;margin-top:2px;font-size:9px;color:#7d868e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sv-purpose{color:#59636d;line-height:1.4}.sv-rating{display:grid;grid-template-columns:auto auto;gap:0 4px;align-items:center;width:max-content}.sv-rating b{font-size:15px;color:#343e47}.sv-rating>span{color:var(--zn-yellow);font-size:16px}.sv-rating small{grid-column:1/3;color:#7d868e;font-size:9px;white-space:nowrap}.sv-review-inline{display:inline-flex;align-items:center;gap:3px}.sv-review-icon{font-size:13px}.sv-price b{display:block;color:#343e47}.sv-price small{display:block;color:#7d868e;font-size:9px;margin-top:1px}
+.sv-deal{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;align-items:center}.sv-promo{min-width:0;width:100%;display:flex;align-items:center;gap:7px;border:1px solid #d7dde2;background:#fff;border-radius:3px;padding:6px 7px;cursor:pointer;transition:background-color .15s,border-color .15s}.sv-promo:hover,.sv-promo:focus{background:var(--zn-blue-soft);border-color:#a9d3e9;outline:none}.sv-promo-text{min-width:0;line-height:1.2}.sv-promo-text small{display:block;font-size:8px;color:#7d868e;text-transform:uppercase;letter-spacing:.25px}.sv-promo-text b{display:block;font-size:10px;color:#3d4852;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}.sv-copy{width:18px;height:18px;flex:0 0 18px;color:#6e7b85}.sv-promo:hover .sv-copy{color:var(--zn-blue)}.sv-no-promo{font-size:10px;color:#9aa1a7}.sv-site{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--zn-blue);background:var(--zn-blue);color:#fff!important;border-radius:3px;padding:7px 8px;font-size:10px;font-weight:700;white-space:nowrap}.sv-site:hover{background:var(--zn-blue-dark);text-decoration:none}
+.sv-copy-state{position:fixed;z-index:100;left:50%;bottom:22px;transform:translateX(-50%) translateY(8px);background:#2f3943;color:#fff;padding:8px 11px;border-radius:4px;font-size:11px;box-shadow:0 5px 18px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:.18s}.sv-copy-state.is-visible{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+
+.sv-mobile-list{display:none}.sv-mobile-card{border-bottom:1px solid var(--zn-line2);background:#fff;padding:10px 9px;cursor:pointer;transition:background-color .15s ease,box-shadow .15s ease}.sv-mobile-card:hover,.sv-mobile-card:focus{background:#f0f8fd;box-shadow:inset 3px 0 0 var(--zn-blue);outline:none}.sv-mobile-head{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:8px;align-items:center}.sv-mobile-head .sv-logo{width:38px;height:38px;flex-basis:38px}.sv-mobile-name{min-width:0}.sv-mobile-name b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sv-mobile-name small{display:block;font-size:9px;color:#7d868e;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sv-mobile-rating{display:flex;align-items:center;gap:5px;white-space:nowrap}.sv-mobile-rating b{font-size:12px}.sv-mobile-rating .star{color:var(--zn-yellow);font-size:13px}.sv-mobile-rating .reviews{display:inline-flex;align-items:center;gap:2px;color:#6f7881;font-size:9px}.sv-mobile-desc{margin-top:7px;color:#59636d;font-size:11px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sv-mobile-info{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:6px;margin-top:8px}.sv-mobile-price{border:1px solid var(--zn-line2);background:#fafbfc;border-radius:3px;padding:6px 7px;min-width:0}.sv-mobile-price small{display:block;font-size:8px;color:#7d868e;text-transform:uppercase}.sv-mobile-price b{display:block;font-size:11px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sv-mobile-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:7px;text-align:center}.sv-overview{display:inline-flex;align-items:center;justify-content:center;border:1px solid #cfd9df;background:#fff;color:#58656e;border-radius:3px;padding:8px;font-size:10px;font-weight:700}.sv-overview:hover{text-decoration:none;border-color:#a7cddd;color:var(--zn-blue)}
+.sv-pagination{display:flex;gap:5px;justify-content:center;padding:12px;border-top:1px solid var(--zn-line2)}.sv-pagination a{width:29px;height:29px;border:1px solid #d9e0e5;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#5a6570}.sv-pagination a.is-active{background:var(--zn-blue);color:#fff;border-color:var(--zn-blue)}.sv-pagination a:hover{text-decoration:none}
+
+.sv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}.sv-section{padding:14px 15px}.sv-section h2{font-size:17px;margin:0 0 9px;color:#343e47}.sv-section h3{font-size:14px;margin:15px 0 6px}.sv-section p{margin:0 0 9px;color:#555f68}.sv-section ul,.sv-section ol{margin:6px 0 10px 18px;padding:0}.sv-section li{margin:4px 0}.sv-guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.sv-guide div{border:1px solid var(--zn-line);background:#fbfcfd;padding:9px}.sv-guide b{display:block;font-size:12px}.sv-guide span{display:block;color:#707982;font-size:10px;margin-top:2px}.sv-note{font-size:11px;color:#757e87;padding:9px 10px;border-left:3px solid #bfdeef;background:#f7fbfd;margin-top:10px}
+.sv-catlinks{display:grid;grid-template-columns:1fr 1fr;gap:7px}.sv-catlink{border:1px solid var(--zn-line);background:#fbfcfd;padding:9px 10px}.sv-catlink a{font-weight:700;font-size:12px}.sv-catlink p{font-size:10px;color:#77818a;margin:3px 0 0}
+.sv-article{margin-bottom:12px}.sv-article h2{font-size:18px}.sv-article h3{font-size:15px;margin-top:19px}.sv-faq{border-top:1px solid var(--zn-line2);margin-top:12px;padding-top:2px}.sv-faq details{border-bottom:1px solid var(--zn-line2);padding:9px 0}.sv-faq summary{cursor:pointer;font-weight:700;font-size:12px}.sv-faq p{font-size:12px;margin:7px 0 1px}.sv-update{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;color:#747d86}.sv-update a{font-weight:700}
+
+@media(max-width:1060px){.sv-col-purpose{width:24%}.sv-col-deal{width:26%}.sv-service-name small{display:none}}
+@media(max-width:960px){.zn-page{grid-template-columns:1fr}.zn-sidebar{display:none}.zn-nav{display:none}}
+@media(max-width:760px){
+  body{font-size:14px}.zn-page{margin:0;padding:0;gap:0}.zn-main{padding:0;margin:0}.sv-wrap{margin:0;padding:0}.sv-breadcrumbs{margin:0;padding:0}
+  .sv-hero,.sv-panel,.sv-section,.sv-update{border-left:0;border-right:0;border-radius:0;box-shadow:none}.sv-hero{margin:0 0 6px;padding:10px 8px}.sv-title-row{gap:7px}.sv-title-row h1{font-size:20px;margin-bottom:5px}.sv-help{width:22px;height:22px;flex-basis:22px;margin-top:0}.sv-help::after{right:-2px;max-width:220px}.sv-hero p{font-size:12px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sv-meta{font-size:10px;margin-top:7px}
+  .sv-root-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:0 6px 3px;margin-bottom:6px}.sv-root-nav::-webkit-scrollbar{display:none}.sv-root-nav a{white-space:nowrap}
+  .sv-filter-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:0 6px 3px;margin-bottom:6px}.sv-filter-nav::-webkit-scrollbar{display:none}.sv-filter-nav button{white-space:nowrap;padding:4px 7px;font-size:10px}
+  .sv-featured{margin:0 0 6px;padding:10px 8px;grid-template-columns:46px 1fr}.sv-featured-logo{width:46px;height:46px;font-size:14px}.sv-featured h2{font-size:14px}.sv-featured p{font-size:11px;line-height:1.35}.sv-featured-stats{margin-top:5px}.sv-featured .sv-site{grid-column:1/3;text-align:center;padding:9px}
+  .sv-panel{margin:0 0 6px}.sv-table-wrap{display:none}.sv-mobile-list{display:block}.sv-pagination{padding:8px}
+  .sv-grid{grid-template-columns:1fr;gap:6px;margin:0 0 6px}.sv-section{padding:10px 8px}.sv-guide{grid-template-columns:1fr}.sv-catlinks{grid-template-columns:1fr}.sv-article{margin:0 0 6px}.sv-update{display:block;padding:8px;margin:0}.sv-update a{display:block;margin-top:3px}
+}
+@media(max-width:390px){.sv-mobile-info{grid-template-columns:1fr}.sv-mobile-head{grid-template-columns:34px minmax(0,1fr) auto;gap:6px}.sv-mobile-head .sv-logo{width:34px;height:34px;flex-basis:34px}.sv-mobile-rating{gap:3px}.sv-root-nav a{font-size:11px}.sv-filter-nav button{font-size:9.5px;padding:4px 6px}}
+
+
+/* Сворачиваемый вводный текст */
+.sv-intro{display:flex;align-items:flex-end;gap:5px;max-width:800px}
+.sv-intro-text-wrap{flex:1;min-width:0}
+.sv-intro-text-wrap p{margin:0!important;color:#5f6872;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.sv-intro.is-open .sv-intro-text-wrap p{display:block;overflow:visible}
+.sv-intro-toggle{flex:0 0 auto;appearance:none;border:0;background:transparent;color:var(--zn-blue);padding:0 3px 2px;cursor:pointer;font-size:17px;font-weight:700;line-height:1}
+.sv-intro-toggle:hover,.sv-intro-toggle:focus{color:var(--zn-blue-dark);outline:none}
+
+</style>
+</head>
+<body>
+<header class="zn-topbar">
+  <div class="zn-topbar__inner">
+    <a class="zn-logo" href="#">ZORNET<span>.RU</span></a>
+    <nav class="zn-nav"><a href="#">Скрипты</a><a href="#">Шаблоны</a><a href="#">Форум</a><a href="#">HTML и CSS</a><a href="#">jQuery</a><a href="#">News</a></nav>
+    <div class="zn-auth">Вход / Регистрация</div>
+  </div>
+</header>
+
+<div class="zn-page">
+<main class="zn-main">
+<div class="sv-wrap">
+  <div class="sv-breadcrumbs"><a href="#">ZorNet.Ru — сайт для вебмастера</a><span>»</span><a href="#">Сервисы</a><span>»</span>API</div>
+
+  <section class="sv-hero">
+    <div class="sv-title-row">
+      <h1>Сервисы с API</h1>
+      <a class="sv-help" href="#seo-description" aria-label="Подробнее о сервисах с API" data-tooltip="Ниже — подробное описание сервисов с API и советы по выбору.">?</a>
+    </div>
+    <div class="sv-intro">
+      <div class="sv-intro-text-wrap">
+        <p id="svIntroText">Подборка сервисов с API для интеграций, автоматизации, передачи данных и подключения к внешним системам. Здесь можно сравнить назначение, тарифы, отзывы и специальные условия.</p>
+      </div>
+      <button class="sv-intro-toggle" id="svIntroToggle" type="button" aria-expanded="false" aria-controls="svIntroText" aria-label="Показать полный текст">⌄</button>
+    </div>
+    <div class="sv-meta"><span><b>48</b> сервисов в категории</span><span>Есть промокоды и бонусы</span><span>Данные обновляются редакцией</span></div>
+  </section>
+<section class="sv-panel sv-featured" data-href="#service-month" role="link" tabindex="0" aria-label="Подробнее о сервисе месяца">
+    <div class="sv-featured-logo">TOP</div>
+    <div>
+      <div class="sv-featured-label"></div>
+      <h2>Сервис месяца с API</h2>
+      <p>Здесь можно размещать редакционный или рекламный сервис с API: краткое описание, ключевые возможности и преимущества.</p>
+      <div class="sv-featured-stats"><span>Есть API</span><span>Есть бесплатный период</span><span>Скидка для ZorNet</span></div>
+    </div>
+    <a class="sv-site" href="#official-service" rel="nofollow sponsored">На сайт</a>
+  </section>
+
+  <section class="sv-panel">
+
+
+    <!-- Демонстрационные рейтинги/тарифы ниже нужны только для визуального прототипа. Перед публикацией заменить данными каталога. -->
+    <div class="sv-table-wrap">
+      <table class="sv-table">
+        <thead>
+          <tr>
+            <th class="sv-col-service">Сервис</th>
+            <th class="sv-col-purpose">Для чего</th>
+            <th class="sv-col-rating">Рейтинг / отзывы</th>
+            <th class="sv-col-price">Тариф</th>
+            <th class="sv-col-deal">Промокод / скидка</th>
+          </tr>
+        </thead>
+        <tbody id="svDesktopRows">
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор TargetHunter" data-href="#service-targethunter" data-name="targethunter" data-rating="9.7" data-reviews="184" data-tags="automation bids" data-discount="1">
+            <td><div class="sv-service"><span class="sv-logo">TH</span><span class="sv-service-name"><b>TargetHunter</b><small>API · API для данных</small></span></div></td>
+            <td class="sv-purpose">Получение и передача данных через API для автоматизации рабочих процессов.</td>
+            <td><div class="sv-rating"><b>9.7</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>184 отзыва</span></small></div></td>
+            <td class="sv-price"><b>от 990 ₽</b><small>в месяц</small></td>
+            <td><div class="sv-deal"><button class="sv-promo" type="button" data-copy="ZORNET" aria-label="Скопировать промокод ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button><a class="sv-site" href="#targethunter-site" rel="nofollow sponsored">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор InstaHero" data-href="#service-instahero" data-name="instahero" data-rating="9.5" data-reviews="91" data-tags="analytics reports" data-discount="1">
+            <td><div class="sv-service"><span class="sv-logo">IH</span><span class="sv-service-name"><b>InstaHero</b><small>API · API аналитики</small></span></div></td>
+            <td class="sv-purpose">Доступ к аналитическим данным и результатам проверок через API.</td>
+            <td><div class="sv-rating"><b>9.5</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>91 отзыв</span></small></div></td>
+            <td class="sv-price"><b>от 399 ₽</b><small>за проверку</small></td>
+            <td><div class="sv-deal"><button class="sv-promo" type="button" data-copy="ZORNET" aria-label="Скопировать промокод ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button><a class="sv-site" href="#instahero-site" rel="nofollow sponsored">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Anketolog" data-href="#service-anketolog" data-name="anketolog" data-rating="9.4" data-reviews="73" data-tags="integrations" data-discount="0">
+            <td><div class="sv-service"><span class="sv-logo">AN</span><span class="sv-service-name"><b>Anketolog</b><small>API · API форм</small></span></div></td>
+            <td class="sv-purpose">Передача ответов, анкет и данных пользователей во внешние системы.</td>
+            <td><div class="sv-rating"><b>9.4</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>73 отзыва</span></small></div></td>
+            <td class="sv-price"><b>Бесплатно</b><small>есть платные тарифы</small></td>
+            <td><div class="sv-deal"><span class="sv-no-promo"></span><a class="sv-site" href="#anketolog-site" rel="nofollow">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Telemetr" data-href="#service-telemetr" data-name="telemetr" data-rating="9.3" data-reviews="116" data-tags="analytics reports" data-discount="0">
+            <td><div class="sv-service"><span class="sv-logo">TM</span><span class="sv-service-name"><b>Telemetr</b><small>API · API статистики</small></span></div></td>
+            <td class="sv-purpose">Получение статистики и данных по каналам через программный интерфейс.</td>
+            <td><div class="sv-rating"><b>9.3</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>116 отзывов</span></small></div></td>
+            <td class="sv-price"><b>от 1 500 ₽</b><small>в месяц</small></td>
+            <td><div class="sv-deal"><span class="sv-no-promo"></span><a class="sv-site" href="#telemetr-site" rel="nofollow">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор ROMI Center" data-href="#service-romi-center" data-name="romi center" data-rating="9.2" data-reviews="64" data-tags="analytics reports integrations" data-discount="0">
+            <td><div class="sv-service"><span class="sv-logo">RC</span><span class="sv-service-name"><b>ROMI Center</b><small>API · API аналитики</small></span></div></td>
+            <td class="sv-purpose">Интеграция рекламных и аналитических данных через API.</td>
+            <td><div class="sv-rating"><b>9.2</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>64 отзыва</span></small></div></td>
+            <td class="sv-price"><b>По запросу</b><small>зависит от задач</small></td>
+            <td><div class="sv-deal"><span class="sv-no-promo"></span><a class="sv-site" href="#romi-site" rel="nofollow">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор SendPulse" data-href="#service-sendpulse" data-name="sendpulse" data-rating="9.1" data-reviews="207" data-tags="automation integrations" data-discount="1">
+            <td><div class="sv-service"><span class="sv-logo">SP</span><span class="sv-service-name"><b>SendPulse</b><small>API · API автоматизации</small></span></div></td>
+            <td class="sv-purpose">Автоматизация рассылок, контактов и сценариев через API.</td>
+            <td><div class="sv-rating"><b>9.1</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>207 отзывов</span></small></div></td>
+            <td class="sv-price"><b>Бесплатно</b><small>есть платные тарифы</small></td>
+            <td><div class="sv-deal"><button class="sv-promo" type="button" data-copy="ZORNET" aria-label="Скопировать промокод ZORNET"><span class="sv-promo-text"><b>ZORNET · бонус</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button><a class="sv-site" href="#sendpulse-site" rel="nofollow sponsored">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Telega.in" data-href="#service-telega" data-name="telega.in" data-rating="9.0" data-reviews="138" data-tags="analytics" data-discount="1">
+            <td><div class="sv-service"><span class="sv-logo">TG</span><span class="sv-service-name"><b>Telega.in</b><small>API · API рекламы</small></span></div></td>
+            <td class="sv-purpose">Интеграция рекламных размещений и данных с внешними системами.</td>
+            <td><div class="sv-rating"><b>9.0</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>138 отзывов</span></small></div></td>
+            <td class="sv-price"><b>от бюджета</b><small>оплата размещений</small></td>
+            <td><div class="sv-deal"><button class="sv-promo" type="button" data-copy="ZORNET" aria-label="Скопировать промокод ZORNET"><span class="sv-promo-text"><b>ZORNET · бонус</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button><a class="sv-site" href="#telega-site" rel="nofollow sponsored">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Roistat" data-href="#service-roistat" data-name="roistat" data-rating="8.9" data-reviews="151" data-tags="analytics tracking reports" data-discount="0">
+            <td><div class="sv-service"><span class="sv-logo">RS</span><span class="sv-service-name"><b>Roistat</b><small>API · API аналитики</small></span></div></td>
+            <td class="sv-purpose">Передача данных аналитики, лидов и конверсий через API.</td>
+            <td><div class="sv-rating"><b>8.9</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>151 отзыв</span></small></div></td>
+            <td class="sv-price"><b>от 5 000 ₽</b><small>в месяц</small></td>
+            <td><div class="sv-deal"><span class="sv-no-promo"></span><a class="sv-site" href="#roistat-site" rel="nofollow">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Simpoll" data-href="#service-simpoll" data-name="simpoll" data-rating="8.8" data-reviews="39" data-tags="integrations" data-discount="0">
+            <td><div class="sv-service"><span class="sv-logo">SI</span><span class="sv-service-name"><b>Simpoll</b><small>API · API форм</small></span></div></td>
+            <td class="sv-purpose">Получение данных из форм и опросов через API.</td>
+            <td><div class="sv-rating"><b>8.8</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>39 отзывов</span></small></div></td>
+            <td class="sv-price"><b>Бесплатно</b><small>есть ограничения</small></td>
+            <td><div class="sv-deal"><span class="sv-no-promo"></span><a class="sv-site" href="#simpoll-site" rel="nofollow">На сайт</a></div></td>
+          </tr>
+          <tr class="sv-row" tabindex="0" role="link" aria-label="Обзор Leadteh" data-href="#service-leadteh" data-name="leadteh" data-rating="8.7" data-reviews="46" data-tags="automation integrations" data-discount="1">
+            <td><div class="sv-service"><span class="sv-logo">LT</span><span class="sv-service-name"><b>Leadteh</b><small>API · API автоматизации</small></span></div></td>
+            <td class="sv-purpose">Интеграция лидов, воронок и автоматизированных процессов через API.</td>
+            <td><div class="sv-rating"><b>8.7</b><span>★</span><small><span class="sv-review-inline"><span class="sv-review-icon">💬</span>46 отзывов</span></small></div></td>
+            <td class="sv-price"><b>от 1 490 ₽</b><small>в месяц</small></td>
+            <td><div class="sv-deal"><button class="sv-promo" type="button" data-copy="ZORNET" aria-label="Скопировать промокод ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button><a class="sv-site" href="#leadteh-site" rel="nofollow sponsored">На сайт</a></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sv-mobile-list" id="svMobileCards">
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-targethunter" data-name="targethunter" data-rating="9.7" data-reviews="184" data-tags="automation bids" data-discount="1">
+        <div class="sv-mobile-head"><span class="sv-logo">TH</span><span class="sv-mobile-name"><b>TargetHunter</b><small>API для данных</small></span><span class="sv-mobile-rating"><b>9.7</b><span class="star">★</span><span class="reviews">💬 184</span></span></div>
+        <div class="sv-mobile-desc">Получение и передача данных через API для автоматизации рабочих процессов.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от 990 ₽ / мес.</b></div><button class="sv-promo" type="button" data-copy="ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-targethunter">Обзор</a><a class="sv-site" href="#targethunter-site" rel="nofollow sponsored">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-instahero" data-name="instahero" data-rating="9.5" data-reviews="91" data-tags="analytics reports" data-discount="1">
+        <div class="sv-mobile-head"><span class="sv-logo">IH</span><span class="sv-mobile-name"><b>InstaHero</b><small>API аналитики</small></span><span class="sv-mobile-rating"><b>9.5</b><span class="star">★</span><span class="reviews">💬 91</span></span></div>
+        <div class="sv-mobile-desc">Доступ к аналитическим данным и результатам проверок через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от 399 ₽</b></div><button class="sv-promo" type="button" data-copy="ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-instahero">Обзор</a><a class="sv-site" href="#instahero-site" rel="nofollow sponsored">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-anketolog" data-name="anketolog" data-rating="9.4" data-reviews="73" data-tags="integrations" data-discount="0">
+        <div class="sv-mobile-head"><span class="sv-logo">AN</span><span class="sv-mobile-name"><b>Anketolog</b><small>API форм</small></span><span class="sv-mobile-rating"><b>9.4</b><span class="star">★</span><span class="reviews">💬 73</span></span></div>
+        <div class="sv-mobile-desc">Передача ответов, анкет и данных пользователей во внешние системы.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>есть бесплатный</b></div></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-anketolog">Обзор</a><a class="sv-site" href="#anketolog-site" rel="nofollow">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-telemetr" data-name="telemetr" data-rating="9.3" data-reviews="116" data-tags="analytics reports" data-discount="0">
+        <div class="sv-mobile-head"><span class="sv-logo">TM</span><span class="sv-mobile-name"><b>Telemetr</b><small>API статистики</small></span><span class="sv-mobile-rating"><b>9.3</b><span class="star">★</span><span class="reviews">💬 116</span></span></div>
+        <div class="sv-mobile-desc">Получение статистики и данных по каналам через программный интерфейс.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от 1 500 ₽ / мес.</b></div></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-telemetr">Обзор</a><a class="sv-site" href="#telemetr-site" rel="nofollow">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-romi-center" data-name="romi center" data-rating="9.2" data-reviews="64" data-tags="analytics reports integrations" data-discount="0">
+        <div class="sv-mobile-head"><span class="sv-logo">RC</span><span class="sv-mobile-name"><b>ROMI Center</b><small>API аналитики</small></span><span class="sv-mobile-rating"><b>9.2</b><span class="star">★</span><span class="reviews">💬 64</span></span></div>
+        <div class="sv-mobile-desc">Интеграция рекламных и аналитических данных через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>по запросу</b></div></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-romi-center">Обзор</a><a class="sv-site" href="#romi-site" rel="nofollow">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-sendpulse" data-name="sendpulse" data-rating="9.1" data-reviews="207" data-tags="automation integrations" data-discount="1">
+        <div class="sv-mobile-head"><span class="sv-logo">SP</span><span class="sv-mobile-name"><b>SendPulse</b><small>API автоматизации</small></span><span class="sv-mobile-rating"><b>9.1</b><span class="star">★</span><span class="reviews">💬 207</span></span></div>
+        <div class="sv-mobile-desc">Автоматизация рассылок, контактов и сценариев через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>есть бесплатный</b></div><button class="sv-promo" type="button" data-copy="ZORNET"><span class="sv-promo-text"><b>ZORNET · бонус</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-sendpulse">Обзор</a><a class="sv-site" href="#sendpulse-site" rel="nofollow sponsored">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-telega" data-name="telega.in" data-rating="9.0" data-reviews="138" data-tags="analytics" data-discount="1">
+        <div class="sv-mobile-head"><span class="sv-logo">TG</span><span class="sv-mobile-name"><b>Telega.in</b><small>API рекламы</small></span><span class="sv-mobile-rating"><b>9.0</b><span class="star">★</span><span class="reviews">💬 138</span></span></div>
+        <div class="sv-mobile-desc">Интеграция рекламных размещений и данных с внешними системами.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от бюджета</b></div><button class="sv-promo" type="button" data-copy="ZORNET"><span class="sv-promo-text"><b>ZORNET · бонус</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-telega">Обзор</a><a class="sv-site" href="#telega-site" rel="nofollow sponsored">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-roistat" data-name="roistat" data-rating="8.9" data-reviews="151" data-tags="analytics tracking reports" data-discount="0">
+        <div class="sv-mobile-head"><span class="sv-logo">RS</span><span class="sv-mobile-name"><b>Roistat</b><small>API аналитики</small></span><span class="sv-mobile-rating"><b>8.9</b><span class="star">★</span><span class="reviews">💬 151</span></span></div>
+        <div class="sv-mobile-desc">Передача данных аналитики, лидов и конверсий через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от 5 000 ₽ / мес.</b></div></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-roistat">Обзор</a><a class="sv-site" href="#roistat-site" rel="nofollow">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-simpoll" data-name="simpoll" data-rating="8.8" data-reviews="39" data-tags="integrations" data-discount="0">
+        <div class="sv-mobile-head"><span class="sv-logo">SI</span><span class="sv-mobile-name"><b>Simpoll</b><small>API форм</small></span><span class="sv-mobile-rating"><b>8.8</b><span class="star">★</span><span class="reviews">💬 39</span></span></div>
+        <div class="sv-mobile-desc">Получение данных из форм и опросов через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>есть бесплатный</b></div></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-simpoll">Обзор</a><a class="sv-site" href="#simpoll-site" rel="nofollow">На сайт</a></div>
+      </article>
+      <article class="sv-mobile-card" tabindex="0" role="link" data-href="#service-leadteh" data-name="leadteh" data-rating="8.7" data-reviews="46" data-tags="automation integrations" data-discount="1">
+        <div class="sv-mobile-head"><span class="sv-logo">LT</span><span class="sv-mobile-name"><b>Leadteh</b><small>API автоматизации</small></span><span class="sv-mobile-rating"><b>8.7</b><span class="star">★</span><span class="reviews">💬 46</span></span></div>
+        <div class="sv-mobile-desc">Интеграция лидов, воронок и автоматизированных процессов через API.</div>
+        <div class="sv-mobile-info"><div class="sv-mobile-price"><small>Тариф</small><b>от 1 490 ₽ / мес.</b></div><button class="sv-promo" type="button" data-copy="ZORNET"><span class="sv-promo-text"><b>ZORNET · −20%</b></span><svg class="sv-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="10" height="10" rx="1.5"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg></button></div>
+        <div class="sv-mobile-actions"><a class="sv-overview" href="#service-leadteh">Обзор</a><a class="sv-site" href="#leadteh-site" rel="nofollow sponsored">На сайт</a></div>
+      </article>
+    </div>
+
+    <div class="sv-pagination"><a class="is-active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">→</a></div>
+  </section>
+
+  <div class="sv-grid">
+    <section class="sv-section">
+      <h2>Как выбрать сервис с API</h2>
+      <p>Сначала определите, какие данные и действия должны быть доступны через API, а затем сравнивайте документацию, лимиты, способы авторизации, тарифы и возможности интеграции.</p>
+      <div class="sv-guide">
+        <div><b>Функции</b><span>Есть ли нужные интеграции, автоматизация и ограничения.</span></div>
+        <div><b>Стоимость</b><span>Цена тарифа, лимиты, пробный период и скрытые доплаты.</span></div>
+        <div><b>Отзывы</b><span>Практический опыт пользователей и качество поддержки.</span></div>
+        <div><b>Бонусы</b><span>Промокоды, скидки и специальные условия для читателей.</span></div>
+      </div>
+      <div class="sv-note">Если сервис имеет промокод ZorNet, он показывается прямо в подборке. Нажатие на поле копирует код, а вся область подсвечивается при наведении.</div>
+    </section>
+
+    <section class="sv-section">
+      <h2>Популярные подборки</h2>
+      <div class="sv-catlinks">
+        <article class="sv-catlink"><a href="#">Сервисы с REST API</a><p>Инструменты с HTTP API для интеграции с внешними системами.</p></article>
+        <article class="sv-catlink"><a href="#">Сервисы аналитики с API</a><p>Получение статистики, отчетов и показателей программным способом.</p></article>
+        <article class="sv-catlink"><a href="#">Сервисы автоматизации с API</a><p>Управление задачами, сценариями и действиями через API.</p></article>
+        <article class="sv-catlink"><a href="#">Маркетинговые сервисы с API</a><p>Интеграции рекламы, лидов, CRM и аналитических данных.</p></article>
+        <article class="sv-catlink"><a href="#">Сервисы с Webhook</a><p>Автоматическая передача событий во внешние системы.</p></article>
+        <article class="sv-catlink"><a href="#">Сервисы для интеграций</a><p>Инструменты для обмена данными между несколькими платформами.</p></article>
+      </div>
+    </section>
+  </div>
+
+  <section class="sv-section sv-article" id="seo-description">
+    <h2>Сервисы с API: для чего нужен программный интерфейс</h2>
+    <p>API позволяет одному сервису обмениваться данными и командами с другими системами без ручной работы. С его помощью можно получать статистику, создавать объекты, передавать лиды, синхронизировать данные и автоматизировать повторяющиеся операции.</p>
+
+    <h3>Что можно делать через API</h3>
+    <p>Набор возможностей зависит от конкретного сервиса. Через API могут быть доступны данные пользователей, отчеты, рекламные кампании, заявки, платежи, файлы, события и другие сущности.</p>
+
+    <h3>Что проверить перед интеграцией</h3>
+    <p>Обратите внимание на документацию, способ авторизации, лимиты запросов, формат ответов, наличие Webhook, стабильность API и доступность нужных методов на вашем тарифе.</p>
+
+    <h3>Как пользоваться подборкой</h3>
+    <ol>
+      <li>Выберите несколько подходящих сервисов.</li>
+      <li>Сравните назначение, тарифы и отзывы.</li>
+      <li>Откройте документацию API.</li>
+      <li>Проверьте нужные методы, лимиты и условия доступа.</li>
+      <li>Если доступен промокод ZorNet, используйте его перед оплатой.</li>
+    </ol>
+  </section>
+
+  <div class="sv-update"><span>Данные подборки обновлены: <b>29.09.2026</b></span><a href="#">Нашли ошибку?</a></div>
+</div>
+</main>
+
+
+</div>
+
+<div class="sv-copy-state" id="svCopyState" role="status" aria-live="polite">Промокод скопирован</div>
+<footer class="zn-footer">ZorNet.Ru — материалы для вебмастера. Демонстрационный макет страницы подборки сервисов.</footer>
+
+<script>
+(function(){
+  const desktopItems=[...document.querySelectorAll('#svDesktopRows .sv-row')];
+  const mobileItems=[...document.querySelectorAll('#svMobileCards .sv-mobile-card')];
+  const toast=document.getElementById('svCopyState');
+  const filterButtons=[...document.querySelectorAll('.sv-filter-nav [data-filter]')];
+  let activeFilter='all';
+
+  function applyFilter(){
+    const matches=el=>activeFilter==='all'||(el.dataset.tags||'').split(/\s+/).includes(activeFilter);
+    desktopItems.forEach(el=>{el.hidden=!matches(el);});
+    mobileItems.forEach(el=>{el.hidden=!matches(el);});
+  }
+
+  filterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+    filterButtons.forEach(x=>x.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    activeFilter=btn.dataset.filter;
+    applyFilter();
+  }));
+
+  function openCard(el){
+    const href=el.dataset.href;
+    if(href) window.location.href=href;
+  }
+  const featured=document.querySelector('.sv-featured[data-href]');
+  [...desktopItems,...mobileItems,...(featured?[featured]:[])].forEach(el=>{
+    el.addEventListener('click',e=>{
+      if(e.target.closest('a,button,input,select')) return;
+      openCard(el);
+    });
+    el.addEventListener('keydown',e=>{
+      if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a,button,input,select')){e.preventDefault();openCard(el);}
+    });
+  });
+
+  let toastTimer;
+  function showToast(){
+    clearTimeout(toastTimer);
+    toast.classList.add('is-visible');
+    toastTimer=setTimeout(()=>toast.classList.remove('is-visible'),1400);
+  }
+  document.querySelectorAll('.sv-promo[data-copy]').forEach(btn=>{
+    btn.addEventListener('click',async e=>{
+      e.preventDefault();e.stopPropagation();
+      const value=btn.dataset.copy||'';
+      try{
+        if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);}
+        else{
+          const ta=document.createElement('textarea');ta.value=value;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();
+        }
+        showToast();
+      }catch(err){
+        toast.textContent='Промокод: '+value;showToast();setTimeout(()=>toast.textContent='Промокод скопирован',1600);
+      }
+    });
+  });
+
+
+  const intro=document.querySelector('.sv-intro');
+  const introToggle=document.getElementById('svIntroToggle');
+  if(intro && introToggle){
+    introToggle.addEventListener('click',function(){
+      const opened=intro.classList.toggle('is-open');
+      this.textContent=opened?'⌃':'⌄';
+      this.setAttribute('aria-expanded',opened?'true':'false');
+      this.setAttribute('aria-label',opened?'Свернуть текст':'Показать полный текст');
+    });
+  }
+
+  applyFilter();
+})();
+</script>
+</body>
+</html>
